@@ -1,0 +1,70 @@
+managed implementation in class /LRN/BP_S4D400_R_Connection unique;
+strict ( 2 );
+with draft;
+
+define behavior for /LRN/S4D400_R_CONNECTION alias Connection
+persistent table /lrn/s4d400aconn
+draft table /LRN/S4D400DCONN
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( readonly )
+   UUID,
+   LocalCreatedAt,
+   LocalCreatedBy,
+   LastChangedAt,
+   LocalLastChangedAt,
+   LocalLastChangedBy;
+
+  field ( readonly )
+    CityFrom,
+    CountryFrom,
+    CityTo,
+    CountryTo;
+
+  field ( numbering : managed )
+   UUID;
+
+ validation CheckSemanticKey
+     on save { create; update; }
+
+  validation CheckCarrierID
+     on save { create; field CarrierID; }
+
+  validation CheckOriginDestination
+     on save { create;
+               field AirportFromID, AirportToID; }
+
+  determination GetCities
+        on save { field AirportFromID, AirportToID; }
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for /LRN/S4D400ACONN
+  {
+    UUID = UUID;
+    CarrierID = CARRIER_ID;
+    ConnectionID = CONNECTION_ID;
+    AirportFromID = AIRPORT_FROM_ID;
+    CityFrom = CITY_FROM;
+    CountryFrom = COUNTRY_FROM;
+    AirportToID = AIRPORT_TO_ID;
+    CityTo = CITY_TO;
+    CountryTo = COUNTRY_TO;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+}

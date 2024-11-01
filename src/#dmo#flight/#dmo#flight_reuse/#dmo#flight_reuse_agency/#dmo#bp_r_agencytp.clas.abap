@@ -1,0 +1,9 @@
+CLASS /dmo/bp_r_agencytp DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF /dmo/r_agencytp.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS /DMO/BP_R_AGENCYTP IMPLEMENTATION.
+ENDCLASS.

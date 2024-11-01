@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/LRN/S4D401_EXS_MESS</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Messages for Exception class</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>/LRN/S4D401_EXS_MESS</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Carrier &amp;1 does not exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>/LRN/S4D401_EXS_MESS</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>You are not authorized to display carrier &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>/LRN/S4D401_EXS_MESS</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Flight &amp;1 &amp;2 on &amp;3 does not exist</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

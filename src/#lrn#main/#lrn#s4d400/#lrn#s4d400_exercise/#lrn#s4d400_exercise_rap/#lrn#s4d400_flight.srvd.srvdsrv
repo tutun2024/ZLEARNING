@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for/LRN/S4D400_C_FLIGHT'
+define service /LRN/S4D400_FLIGHT {
+  expose /LRN/S4D400_C_FLIGHT as Flight;
+}

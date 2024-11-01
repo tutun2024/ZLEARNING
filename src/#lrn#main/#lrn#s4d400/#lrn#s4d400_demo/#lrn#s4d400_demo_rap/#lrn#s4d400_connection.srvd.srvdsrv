@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for/LRN/S4D400_C_CONNECTION'
+define service /LRN/S4D400_CONNECTION {
+  expose /LRN/S4D400_C_CONNECTION as Connection;
+}

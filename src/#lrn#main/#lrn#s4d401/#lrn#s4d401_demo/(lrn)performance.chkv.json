@@ -1,0 +1,210 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Demo: ATC Performance Checks",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "selectedChecks": [
+    {
+      "checkName": "CI_ANALYZE_WHERE",
+      "parameters": [
+        {
+          "name": "NoWhereCondition",
+          "value": "true"
+        },
+        {
+          "name": "NoIndexInWhereCondition",
+          "value": "true"
+        },
+        {
+          "name": "NoFirstIndexFieldInWhereCondition",
+          "value": "true"
+        },
+        {
+          "name": "ClientSpecifiedWithoutMandt",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "checkName": "CI_ANALYZE_WHERE_IMUD",
+      "parameters": [
+        {
+          "name": "NoWhereCondition",
+          "value": "true"
+        },
+        {
+          "name": "NoIndexInWhereCondition",
+          "value": "true"
+        },
+        {
+          "name": "NoFirstIndexFieldInWhereCondition",
+          "value": "true"
+        },
+        {
+          "name": "ClientSpecifiedWithoutMandt",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "checkName": "CI_ITAB_PERFORMANCE",
+      "parameters": [
+        {
+          "name": "CheckStandardTables",
+          "value": "true"
+        },
+        {
+          "name": "CheckSortedTables",
+          "value": "true"
+        },
+        {
+          "name": "CheckHashedTables",
+          "value": "true"
+        },
+        {
+          "name": "CheckGenericTables",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "checkName": "CI_ANALYZE_SELECT_HANA",
+      "parameters": [
+        {
+          "name": "RestrictToTables"
+        },
+        {
+          "name": "MinimumTableSizeCategory",
+          "value": "0"
+        },
+        {
+          "name": "MinimumNumberOfTableFields",
+          "value": "2"
+        },
+        {
+          "name": "PercentageOfFields",
+          "value": "20"
+        },
+        {
+          "name": "ExcludeBufferedReads",
+          "value": "true"
+        },
+        {
+          "name": "OnlyLocalProcedures",
+          "value": "true"
+        },
+        {
+          "name": "NonLocalAnalysisDepth",
+          "value": "1"
+        },
+        {
+          "name": "DoNotTransformSelects",
+          "value": "false"
+        },
+        {
+          "name": "AssignmentEffort",
+          "value": "20"
+        },
+        {
+          "name": "AssignmentColumnAccess",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "checkName": "CI_SELECT_TAW_BYBUF"
+    },
+    {
+      "checkName": "CI_VALUE_PARAMETER",
+      "parameters": [
+        {
+          "name": "CheckNestedTables",
+          "value": "true"
+        },
+        {
+          "name": "CheckTables",
+          "value": "true"
+        },
+        {
+          "name": "CheckStrings",
+          "value": "true"
+        },
+        {
+          "name": "CheckLongFields",
+          "value": "true"
+        },
+        {
+          "name": "CheckReturningParameters",
+          "value": "false"
+        },
+        {
+          "name": "CheckEventParameters",
+          "value": "false"
+        },
+        {
+          "name": "CheckUnchangedImportingParameters",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "checkName": "CI_FOR_ALL_ENTRIES_HANA",
+      "parameters": [
+        {
+          "name": "RestrictToTables"
+        },
+        {
+          "name": "MinimumTableSizeCategory",
+          "value": "0"
+        },
+        {
+          "name": "ExcludeBufferedReads",
+          "value": "true"
+        },
+        {
+          "name": "OnlyLocalProcedures",
+          "value": "true"
+        },
+        {
+          "name": "NonLocalAnalysisDepth",
+          "value": "1"
+        },
+        {
+          "name": "AssignmentEffort",
+          "value": "10"
+        },
+        {
+          "name": "CallEffort",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "checkName": "CI_DDIC_TABLES",
+      "parameters": [
+        {
+          "name": "CheckTechnicalSettings",
+          "value": "true"
+        },
+        {
+          "name": "CheckTableIndices",
+          "value": "true"
+        },
+        {
+          "name": "CheckBufferingOfINDXTables",
+          "value": "false"
+        },
+        {
+          "name": "CheckClientDependencyOfViews",
+          "value": "false"
+        },
+        {
+          "name": "CheckForHANASpecifics",
+          "value": "false"
+        }
+      ]
+    }
+  ]
+}

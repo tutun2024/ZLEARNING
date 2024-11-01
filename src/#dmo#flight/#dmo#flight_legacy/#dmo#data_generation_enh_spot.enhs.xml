@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>BADI_DEF</TOOL>
+   <SHORTTEXT>Enhancement Spot for the DataGenerator in /DMO/FLIGHT</SHORTTEXT>
+   <BADI_DATA>
+    <ENH_BADI_DATA>
+     <BADI_NAME>/DMO/DATA_GENERATION_BADI</BADI_NAME>
+     <INTERFACE_NAME>/DMO/IF_DATA_GENERATION_BADI</INTERFACE_NAME>
+     <CONTEXT_MODE>N</CONTEXT_MODE>
+     <BADI_SHORTTEXT>BAdI to be called after the legecy data has been generated</BADI_SHORTTEXT>
+    </ENH_BADI_DATA>
+   </BADI_DATA>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,9 @@
+@EndUserText.label: 'Demo: Access Control for Airlines'
+@MappingRole: true
+define role /LRN/S4D401_ACD_AIRPORT 
+  {
+    grant select 
+       on /LRN/S4D401_ACD_AIRPORT
+    where (Country) = aspect pfcg_auth( /DMO/TRVL, /DMO/CNTRY, ACTVT = '03');
+
+}

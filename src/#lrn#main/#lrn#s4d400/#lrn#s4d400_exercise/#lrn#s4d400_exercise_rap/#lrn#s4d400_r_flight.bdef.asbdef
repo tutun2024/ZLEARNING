@@ -1,0 +1,59 @@
+managed implementation in class /lrn/bp_s4d400_r_flight unique;
+strict ( 2 );
+with draft;
+
+define behavior for /LRN/S4D400_R_FLIGHT alias Flight
+persistent table /lrn/s4d400aflgt
+draft table /LRN/S4D400DFLGT
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+
+ field ( mandatory : create )
+   CarrierID,
+   ConnectionID,
+   FlightDate;
+
+  field ( readonly )
+   LocalCreatedAt,
+   LocalCreatedBy,
+   LastChangedAt,
+   LocalLastChangedAt,
+   LocalLastChangedBy;
+
+  field ( readonly : update )
+   CarrierID,
+   ConnectionID,
+   FlightDate;
+
+  create;
+  update;
+  delete;
+
+  validation validatePrice        on save { create; field Price; }
+
+  validation validateCurrencyCode on save { create; field CurrencyCode; }
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for /LRN/S4D400AFLGT
+  {
+    CarrierID = CARRIER_ID;
+    ConnectionID = CONNECTION_ID;
+    FlightDate = FLIGHT_DATE;
+    Price = PRICE;
+    CurrencyCode = CURRENCY_CODE;
+    PlaneTypeID = PLANE_TYPE_ID;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+}

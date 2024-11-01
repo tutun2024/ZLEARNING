@@ -1,0 +1,81 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Flight',
+    typeNamePlural: 'Flights'
+  }
+}
+annotate view /LRN/S4D400_C_FLIGHT with
+  {
+    @UI.facet: [ {
+      id: 'idIdentification',
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Flight',
+      position: 10
+    } ]
+    @UI.lineItem: [ {
+      position: 10 ,
+      importance: #MEDIUM
+    } ]
+    @UI.identification: [ {
+      position: 10
+    } ]
+    @UI.selectionField: [{
+      position: 10
+     }]
+    carrierid;
+
+    @UI.lineItem: [ {
+      position: 20 ,
+      importance: #MEDIUM
+    } ]
+    @UI.identification: [ {
+      position: 20
+    } ]
+    @UI.selectionField: [{
+      position: 20
+     }]
+    connectionid;
+
+    @UI.lineItem: [ {
+      position: 30 ,
+      importance: #MEDIUM
+    } ]
+    @UI.identification: [ {
+      position: 30
+    } ]
+    flightdate;
+
+    @UI.lineItem: [ {
+      position: 40 ,
+      importance: #MEDIUM
+    } ]
+    @UI.identification: [ {
+      position: 40
+    } ]
+    price;
+
+    @UI.lineItem: [ {
+      position: 50 ,
+      importance: #MEDIUM
+    } ]
+    @UI.identification: [ {
+      position: 50
+    } ]
+    currencycode;
+
+    @UI.lineItem: [ {
+      position: 60 ,
+      importance: #MEDIUM
+    } ]
+    //    @UI.identification: [ {
+    //      position: 60
+    //    } ]
+    @UI.identification: [ {
+      position: 35
+    } ]
+    planetypeid;
+
+    @UI.hidden: true
+    locallastchangedat;
+  }
